@@ -6,7 +6,7 @@ import(
 )
 // 2: Write the fuzzer
 func FuzzParseString(data []byte) int {
-	s = string(data)
+	s := string(data)
 	iter := jsoniter.ParseString(jsoniter.ConfigDefault, s)
 	iter.ReadArray()
 	return 1
